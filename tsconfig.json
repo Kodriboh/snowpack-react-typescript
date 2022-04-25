@@ -1,10 +1,18 @@
 {
   "include": ["src", "types"],
+  "lib": [
+    "dom",
+    "dom.iterable",
+    "esnext"
+  ],
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
     "jsx": "preserve",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "experimentalDecorators": true,
     "baseUrl": "./",
     /* paths - import rewriting/resolving */
     "paths": {
@@ -15,6 +23,7 @@
     },
     /* noEmit - Snowpack builds (emits) files, not tsc. */
     "noEmit": true,
+    "noEmitOnError": true,
     /* Additional Options */
     "strict": true,
     "skipLibCheck": true,
